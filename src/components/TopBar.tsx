@@ -70,19 +70,19 @@ export function TopBar({
             </NavLink>
           ))}
         </nav>
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex min-w-0 items-center gap-2">
           <button
             type="button"
             onClick={onOpenPalette}
             aria-label="Open command palette"
             aria-keyshortcuts="Control+K Meta+K"
-            className="inline-flex h-8 w-[220px] max-w-[42vw] items-center gap-2 rounded-[6px] border border-border-default bg-surface-raised px-2.5 text-text-tertiary hover:text-text-secondary"
+            className="inline-flex h-8 w-[220px] min-w-8 max-w-full shrink items-center gap-2 rounded-[6px] border border-border-default bg-surface-raised px-2.5 text-text-tertiary hover:text-text-secondary max-[560px]:w-8 max-[560px]:justify-center max-[560px]:px-0"
           >
             <Search size={14} aria-hidden="true" />
-            <span className="min-w-0 flex-1 truncate text-left max-[420px]:sr-only">Search</span>
+            <span className="min-w-0 flex-1 truncate text-left max-[560px]:hidden">Search</span>
             <kbd
               aria-hidden="true"
-              className="rounded-[6px] border border-border-default px-1.5 font-mono text-xs leading-4 text-text-tertiary max-[420px]:hidden"
+              className="rounded-[6px] border border-border-default px-1.5 font-mono text-xs leading-4 text-text-tertiary max-[640px]:hidden"
             >
               {hint}
             </kbd>
